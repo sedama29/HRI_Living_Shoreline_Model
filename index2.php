@@ -248,79 +248,17 @@ table, th, td {
     }
   }
 
-    // for($i=1;$i<=26;$i++){
-    // if($i=10 or $i=15 or $i=17 or $i=24)
-    // {
-    //   echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
-    //   <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-    //   </div>';
-    // }
-    // else{
-    //   echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
-    //   <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-    //   </div>';
-    // }
-    // }
-    // for($i=1;$i<=25;$i++){
-    //   echo '<div class="box" id="trr_no'.$i.'" style="color:red;font-size:33px" >
-    //   <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][5].'</span></p>
-    //   </div>'; 
-    // }
-    // echo '<div class="box" id="trr_no26" style="color:red;font-size:33px" >
-    // <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][5].'</span></p>
-    // </div>';    
 
 
 
-
-    for($i=1;$i<=9;$i++)
-    {
-      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-    }
-      echo '  <div class="box" id="trr_yes11" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-    for($i=11;$i<=14;$i++){
-      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-    }
-      echo '  <div class="box" id="trr_yes15" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-      echo '  <div class="box" id="trr_yes16" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-      echo '  <div class="box" id="trr_yes17" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-      for($i=18;$i<=22;$i++){
-      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-    }
-      echo '  <div class="box" id="trr_yes23" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-      echo '  <div class="box" id="trr_yes24" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-    for($i=24;$i<=26;$i++){
-      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-      </div>';
-    } 
-  
-    for($i=1;$i<=25;$i++){
-      echo '<div class="box" id="trr_no'.$i.'" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][5].'</span></p>
-      </div>';
-  }
-    echo '<div class="box" id="trr_no26" style="color:red;font-size:33px" >
-    <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+    for($i =1; $i<=26;$i++){
+    echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
+    <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
     </div>';
+    echo '<div class="box" id="trr_no'.$i.'" style="color:red;font-size:33px" >
+    <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+    </div>';
+  }
 
 
 ?>

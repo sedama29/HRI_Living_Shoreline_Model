@@ -58,18 +58,18 @@ right: 0;
 header {
 border: 5px groove #34568B;
 text-align: center;
-color: #ffcc00;
-font-size:20px;
+color: #f0ebe6;
+font-size:24px;
 background-repeat: no-repeat;
 background-position: fixed;
-background-blend-mode: lighten;
+/* background-blend-mode: lighten; */
 }
 .header2 {
 border: 5px groove #34568B;
 text-align: center;
 color: #2d2a26;
 font-size:22px;
-background-color: #fbe368;
+background-color: #a3b4e4;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
@@ -115,7 +115,7 @@ bottom: 5%;
   color: #000000; 
 }
 .special-word3 { 
-  color: rgb(23, 245, 189); 
+  color: rgb(23, 75, 245); 
 }
 .b1{
   position:center;

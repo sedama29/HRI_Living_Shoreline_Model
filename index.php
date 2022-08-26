@@ -252,7 +252,7 @@ table, th, td {
 
 
     for($i =1; $i<=26;$i++){
-    if($i=10 or $i=15 or $i=17 or $i=23 or $i=24)
+    if($i=10 OR $i=15 OR $i=17 OR $i=23 or $i=24)
     {
       echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
       <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>

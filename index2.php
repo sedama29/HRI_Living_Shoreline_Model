@@ -39,7 +39,7 @@ table, th, td {
     if($i==1){    
   echo '<table id="trr'.$i.'"  style="width:100%;">
   <tr>
-  <td style=" border: 1px solid black; width:100%;" colspan="3">
+  <td style=" border: 1px solid black; width:100%;" colspan="4">
   <header role="banner" id="theHeader" style="background-size: cover;background-image: url('."images/living_shoreline_picture.png".');background-repeat: no-repeat;">
     <h1 >Living Shoreline Site Suitability Decision Tool</h1>
   </header>
@@ -50,9 +50,11 @@ table, th, td {
   </td>
   </tr>
   <tr >
-          <td bgcolor = "#aaa"  style=" border: 1px solid black; width:80%; min-width:400px;" >
+          <td bgcolor = "#aaa"  style=" border: 1px solid black; width:75%; min-width:400px;" >
           <p style="color:black;font-size:22px; padding-left: 50px">'.$array[$i][1].'</p>
-          </td>   
+          </td>
+          <td bgcolor = "#aaa"  style="width:5%;border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;">
+          
           <td bgcolor = "#eee" style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:10%;">
           <div id = "question'.$i.'" class="button " style="position:center;">
             <button id="valider_yes'.$i.'" name="Yes" type="Yes" class = "b1" value="Yes" onclick="functionAlert_yes('.$i.'); " >Yes</button>    
@@ -248,20 +250,91 @@ table, th, td {
     }
   }
 
+    // for($i=1;$i<=26;$i++){
+    // if($i=10 or $i=15 or $i=17 or $i=24)
+    // {
+    //   echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
+    //   <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+    //   </div>';
+    // }
+    // else{
+    //   echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
+    //   <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+    //   </div>';
+    // }
+    // }
+    // for($i=1;$i<=25;$i++){
+    //   echo '<div class="box" id="trr_no'.$i.'" style="color:red;font-size:33px" >
+    //   <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+    //   </div>'; 
+    // }
+    // echo '<div class="box" id="trr_no26" style="color:red;font-size:33px" >
+    // <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+    // </div>';    
 
 
 
-    for($i =1; $i<=26;$i++){
-    echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
-    <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
-    </div>';
-    echo '<div class="box" id="trr_no'.$i.'" style="color:red;font-size:33px" >
-    <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][5].'</span></p>
-    </div>';
+
+    for($i=1;$i<=9;$i++)
+    {
+      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+    }
+      echo '  <div class="box" id="trr_yes11" style="color:red;font-size:33px" >
+      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+    for($i=11;$i<=14;$i++){
+      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+    }
+      echo '  <div class="box" id="trr_yes15" style="color:red;font-size:33px" >
+      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+      echo '  <div class="box" id="trr_yes16" style="color:red;font-size:33px" >
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+      echo '  <div class="box" id="trr_yes17" style="color:red;font-size:33px" >
+      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+      for($i=18;$i<=22;$i++){
+      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+    }
+      echo '  <div class="box" id="trr_yes23" style="color:red;font-size:33px" >
+      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+      echo '  <div class="box" id="trr_yes24" style="color:red;font-size:33px" >
+      <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+    for($i=24;$i<=26;$i++){
+      echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      </div>';
+    } 
+  
+    for($i=1;$i<=25;$i++){
+      echo '<div class="box" id="trr_no'.$i.'" style="color:red;font-size:33px" >
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+      </div>';
   }
+    echo '<div class="box" id="trr_no26" style="color:red;font-size:33px" >
+    <p><span class="special-word3">Consider! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+    </div>';
 
 
 ?>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+  
 <footer style="width:100%; border-top: 1px groove black; border-bottom: 1px groove black;background-color: #ffffff;margin-top:auto;">
   <div  class="footerContainer" >
     <!-- <li> <img  class="center" src="images/harte_logo.png" width = auto height= "60" onclick="window.location='https://storymaps.arcgis.com/stories/d233a382741a4201bea12299ed6c4633'"/>

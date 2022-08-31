@@ -164,3 +164,30 @@ function next_no1(w,q,z){
   document.getElementById('trr'+w).style.display = "table";
   document.getElementById('trr'+w).style.width = "100%";
 }
+
+var modal=[];
+var span = [];
+for(var i=0;i<=26;i++){
+modal[i] = document.getElementById("myModal"+i);
+span[i] = document.getElementById("closed"+i);
+// Get the button that opens the modal
+}
+// Get the <span> element that closes the modal
+
+
+function popup(x){
+// When the user clicks the button, open the modal 
+  modal[x].style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+span[x].onclick = function() {
+  modal[x].style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal[x]) {
+    modal[x].style.display = "none";
+  }
+}
+}

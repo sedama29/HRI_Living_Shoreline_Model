@@ -18,12 +18,23 @@ table, th, td {
 </style>
 
 <?php
+      if (($open = fopen("data/Shorelines2.csv", "r")) !== FALSE) 
+      {    
+        while (($data = fgetcsv($open, 1000, ",")) !== FALSE) 
+        {        
+          $array[] = $data; 
+        }      
+        fclose($open);
+      }
 for($i =1; $i<=26;$i++){
   echo '<div id="myModal'.$i.'" class="modal">
   <!-- Modal content -->
+  <div class ="modal-overlay">
   <div class="modal-content">
     <span id = "closed'.$i.'" class="close">&times;</span>
-    <p>'.$i.'</p>
+    <br>
+    <p>'.$array[$i][6].'</p>
+  </div>
   </div>
   </div>';
 }
@@ -59,11 +70,11 @@ for($i =1; $i<=26;$i++){
   </td>
   </tr>
   <tr >
-          <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;" >
+          <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;" >
           <p style="color:black;font-size:22px; padding-left: 50px">'.$array[$i][1].'</p>
           </td> 
-          <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:5%;text-align: center;" >
-          <img id = "myBtn" src="images/icon2.png" alt="displaying information"  style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+          <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:10%;text-align: center;" >
+          <img id = "icon2" src="images/icon2.png"  style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
           </td>   
           <td bgcolor = "#eee" style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:10%;">
           <div id = "question'.$i.'" class="button " style="position:center;">
@@ -81,11 +92,11 @@ for($i =1; $i<=26;$i++){
     else if($i == 17){
       echo '<table id="trr'.$i.'" width = "100%" hidden>
       <tr>
-      <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;">
+      <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;">
       <p style="color:black;font-size:22px;padding-left: 50px;" >'.$array[$i][1].'</p>
       </td>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black; width:5%;text-align: center;" >
-      <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black; width:10%;text-align: center;" >
+      <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
       </td>  
       <td bgcolor = "#eee" style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;">
       <div id = "question'.$i.'" class="button"  style="position:center">
@@ -103,11 +114,11 @@ for($i =1; $i<=26;$i++){
     else if($i == 18){
       echo '<table id="trr'.$i.'" width = "100%" hidden>
       <tr>
-      <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;">
+      <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;">
       <p style="color:black;font-size:22px;padding-left: 50px;">'.$array[$i][1].'</p>
       </td>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:5%;text-align: center;" >
-      <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:10%;text-align: center;" >
+      <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
       </td>     
       <td bgcolor = "#eee" style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;">
       <div id = "question'.$i.'" class="button"  style="position:center">
@@ -125,11 +136,11 @@ for($i =1; $i<=26;$i++){
     else if($i == 19){
       echo '<table id="trr'.$i.'" width = "100%" hidden>
       <tr>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;">
       <p style="color:black;font-size:22px;padding-left: 50px;">'.$array[$i][1].'</p>
       </td>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black; width:5%;text-align: center;" >
-      <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black; width:10%;text-align: center;" >
+      <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
       </td>    
       <td bgcolor = "#eee" style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;">
       <div id = "question'.$i.'" class="button"  style="position:center">
@@ -147,11 +158,11 @@ for($i =1; $i<=26;$i++){
     else if($i == 20){
       echo '<table id="trr'.$i.'" width = "100%" hidden>
       <tr>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;">
       <p style="color:black;font-size:22px;padding-left: 50px;">'.$array[$i][1].'</p>
       </td> 
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:5%;text-align: center;" >
-      <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:10%;text-align: center;" >
+      <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
       </td> 
       <td bgcolor = "#eee" style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;">
       <div id = "question'.$i.'" class="button"  style="position:center">
@@ -169,11 +180,11 @@ for($i =1; $i<=26;$i++){
     else if($i == 21){
       echo '<table id="trr'.$i.'" width = "100%" hidden>
       <tr>
-      <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;">
+      <td bgcolor = "#aaa"  style=" border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;">
       <p style="color:black;font-size:22px;padding-left: 50px;">'.$array[$i][1].'</p>
       </td>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:5%;text-align: center;" >
-      <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:10%;text-align: center;" >
+      <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
       </td>    
       <td bgcolor = "#eee" style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;">
       <div id = "question'.$i.'" class="button"  style="position:center">
@@ -191,11 +202,11 @@ for($i =1; $i<=26;$i++){
     else if($i == 22){
       echo '<table id="trr'.$i.'" width = "100%" hidden>
       <tr>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;">
       <p style="color:black;font-size:22px;padding-left: 50px;">'.$array[$i][1].'</p>
       </td>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:5%;text-align: center;" >
-      <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:10%;text-align: center;" >
+      <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
       </td>     
       <td bgcolor = "#eee" style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;">
       <div id = "question'.$i.'" class="button"  style="position:center">
@@ -213,11 +224,11 @@ for($i =1; $i<=26;$i++){
     else if($i == 26){
       echo '<table id="trr'.$i.'" width = "100%" hidden>
       <tr>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;">
       <p style="color:black;font-size:22px;padding-left: 50px;">'.$array[$i][1].'</p>
       </td>
-      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:5%;text-align: center;" >
-      <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+      <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:10%;text-align: center;" >
+      <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
       </td>     
       <td bgcolor = "#eee"  style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;">
       <div id = "question'.$i.'" class="button"  style="position:center">
@@ -236,11 +247,11 @@ for($i =1; $i<=26;$i++){
     else{
       echo '<table id="trr'.$i.'" width = 100% hidden>
       <tr>
-              <td bgcolor = "#aaa"   style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:75%; min-width:400px;" >
+              <td bgcolor = "#aaa"   style="border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black; width:70%; min-width:400px;" >
               <p style="color:black;font-size:22px;padding-left: 50px; " >'.$array[$i][1].'</p>
               </td> 
-              <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:5%;text-align: center;" >
-              <img src="images/icon2.png" alt="displaying information" style ="width:40%;height:40%;" onClick = "popup('.$i.')">
+              <td bgcolor = "#aaa"  style="border-top:1px solid black;border-bottom:1px solid black;border-right:1px solid black;width:10%;text-align: center;" >
+              <img src="images/icon2.png" alt="displaying information" style ="min-width:40px;width:30%;height:auto;" onClick = "popup('.$i.')">
               </td>     
               <td bgcolor = "#eee"  style="width:10%;border-top:1px solid black;border-bottom:1px solid black;border-left:1px solid black;>
               <div id = "button_question'.$i.'" class="button"  style="position:center">
@@ -291,8 +302,8 @@ for($i =1; $i<=26;$i++){
       <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
       </div>';
     }
-      echo '  <div class="box" id="trr_yes11" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      echo '  <div class="box" id="trr_yes10" style="color:red;font-size:33px" >
+      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[10][4].'</span></p>
       </div>';
     for($i=11;$i<=14;$i++){
       echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
@@ -300,13 +311,13 @@ for($i =1; $i<=26;$i++){
       </div>';
     }
       echo '  <div class="box" id="trr_yes15" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[15][4].'</span></p>
       </div>';
       echo '  <div class="box" id="trr_yes16" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[16][4].'</span></p>
       </div>';
       echo '  <div class="box" id="trr_yes17" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[17][4].'</span></p>
       </div>';
       for($i=18;$i<=22;$i++){
       echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
@@ -314,24 +325,27 @@ for($i =1; $i<=26;$i++){
       </div>';
     }
       echo '  <div class="box" id="trr_yes23" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[23][4].'</span></p>
       </div>';
       echo '  <div class="box" id="trr_yes24" style="color:red;font-size:33px" >
-      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[$i][4].'</span></p>
+      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[24][4].'</span></p>
       </div>';
-    for($i=24;$i<=26;$i++){
+    for($i=25;$i<=26;$i++){
       echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
       <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][4].'</span></p>
       </div>';
     } 
   
-    for($i=1;$i<=25;$i++){
+    for($i=1;$i<=24;$i++){
       echo '<div class="box" id="trr_no'.$i.'" style="color:red;font-size:33px" >
-      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+      <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[$i][5].'</span></p>
       </div>';
   }
+    echo '<div class="box" id="trr_no25" style="color:red;font-size:33px" >
+      <p><span class="special-word">Stop! </span><span class="special-word2">'.$array[25][5].'</span></p>
+      </div>';
     echo '<div class="box" id="trr_no26" style="color:red;font-size:33px" >
-    <p><span class="special-word3">Recommended! </span><span class="special-word2">'.$array[$i][5].'</span></p>
+    <p><span class="special-word3">Recommended: </span><span class="special-word2">'.$array[26][5].'</span></p>
     </div>';
 
 

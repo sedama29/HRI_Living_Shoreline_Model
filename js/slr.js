@@ -37,6 +37,7 @@ function functionAlert_yes(y){
   document.getElementById('trr_yes'+y).style.display = "block";
 }
 
+
 function functionAlert_no(z){
   document.getElementById('valider_yes'+z).style.backgroundColor = '#928CB2';
   for(var i =1;i<=26;i++){
@@ -178,6 +179,7 @@ span[i] = document.getElementById("closed"+i);
 function popup(x){
 // When the user clicks the button, open the modal 
   modal[x].style.display = "block";
+  
 
 // When the user clicks on <span> (x), close the modal
 span[x].onclick = function() {

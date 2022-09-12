@@ -1,11 +1,13 @@
-<!-- Header Start
 
-Name: 
+<?php
+/* Module: index.php
+Developer: Sathwika Edama
 Last Mofified: 09-02-2022
-object: To understand the recommended shoreline erosion control strategy.
-Return: void
+Purpose: To understand the recommended shoreline erosion control strategy.
+Acknowledgement: Sandeep jilla assisted in the project
+Return: void */ 
+?>
 
-Header End -->
 
 
 <!DOCTYPE html>
@@ -26,6 +28,7 @@ table, th, td {
 
 </style>
 
+<!-- To read the data from the csv file -->
 <?php
       if (($open = fopen("data/Shorelines2.csv", "r")) !== FALSE) 
       {    
@@ -35,6 +38,8 @@ table, th, td {
         }      
         fclose($open);
       }
+      
+// To display the description of each question when button is pressed
 for($i =1; $i<=26;$i++){
   echo '<div id="myModal'.$i.'" class="modal">
   <!-- Modal content -->
@@ -66,6 +71,7 @@ for($i =1; $i<=26;$i++){
       echo '<table class = "table-responsive" id = "table1" style="width:100%;" ><tr><td>';
   for($i =1; $i<=26;$i++){
     if($i==1){    
+  // A table is created with four columns
   echo '<table id="trr'.$i.'"  style="width:100%;">
   <tr>
   <td style=" border: 1px solid black; width:100%;" colspan="4">
@@ -274,7 +280,6 @@ for($i =1; $i<=26;$i++){
                   echo 'onclick="next_yes1('.$array[$i][2].','.$i.','.$array[$i][3].');"';
                 }
                 else{
-                  // echo 'onClick = alert('.$array[$i][2].')';
                   echo 'onclick="next_yes('.$array[$i][2].','.$i.');"';
                 }
                 echo '>Yes</button>
@@ -292,7 +297,6 @@ for($i =1; $i<=26;$i++){
                   echo 'onclick="next_no1('.$array[$i][3].','.$i.','.$array[$i][2].');"';
                 }
                 else{
-                  // echo 'onClick = alert('.$array[$i][2].')';
                   echo 'onclick="next_no('.$array[$i][3].','.$i.');"';
                 }
                 echo '>No</button>
@@ -304,7 +308,9 @@ for($i =1; $i<=26;$i++){
     }
   }
 
+   
 
+  //To display the stop messages
     for($i=1;$i<=9;$i++)
     {
       echo '  <div class="box" id="trr_yes'.$i.'" style="color:red;font-size:33px" >
@@ -360,11 +366,9 @@ for($i =1; $i<=26;$i++){
 
 ?>
 
+<!-- To display the footer with 5 images -->
 <footer style="width:100%; border-top: 1px groove black; border-bottom: 1px groove black;background-color: #ffffff;margin-top:auto;">
   <div  class="footerContainer" >
-    <!-- <li> <img  class="center" src="images/harte_logo.png" width = auto height= "60" onclick="window.location='https://storymaps.arcgis.com/stories/d233a382741a4201bea12299ed6c4633'"/>
-    </li> -->
-    <!-- <a  href="https://storymaps.arcgis.com/stories/d233a382741a4201bea12299ed6c4633" target="_blank"></a> -->
     <table colspan="4" width =100% style="background-color:#ffffff;">
       <tr>
       <td width =20% style="background-color:#ffffff;text-align: center;">
@@ -387,8 +391,8 @@ for($i =1; $i<=26;$i++){
   </div>
 </footer>
 
+<!-- To display the reset button and restart the website when button is clicked -->
 <div class="reset" style="float:right; position: absolute;bottom:0; right:0;color:white" onclick="myfunction()">Restart</div>
-  <!-- <div class = "reset" style="position:fixed; right:5px;" onclick="myfunction()">Restart</div> -->
   
 </body>
 

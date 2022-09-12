@@ -1,4 +1,4 @@
-rowId,question,response1,response2,Message_No,response4,respone5
+rowId,question,response_Yes,response_No,Message_Yes,Messgae_No,information_question
 1,Bank height higher than 10 feet?,*,2,Seek expert advice on land use management.,,"The height of the bank between the shoreline and the upland can limit the effectiveness of shoreline management techniques. If the bank height is greater than 10ft, contacting an expert may be useful before proceeding. "
 2,Is the shoreline defended?,3,7,,,Shoreline protection structures include bulkheads (vertical sea walls generally made of treated wood or steel that sit seaward of the shoreline with fill material on the landward side) and revetment or riprap (large boulder or concrete blocks that are placed on a gradient along the shoreline). 
 3,"Does the shoreline have a retaining wall, seawall, other bulkhead feature?",5,4,,,"Retaining walls, sea walls, and bulkheads are vertical walls generally made of treated wood or steel that sit seaward of the shoreline with fill material on the landward side or may be secured directly to the shoreline. "

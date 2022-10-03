@@ -1,4 +1,6 @@
+//this function is used to reset the data in website
 function myfunction() {
+  //to hide and change the color of all the buttons
 for(var i =1;i<=26;i++){
   if(document.getElementById('valider_no'+i))
     document.getElementById('valider_no'+i).style.backgroundColor = '#928CB2';
@@ -9,6 +11,7 @@ for(var i =1;i<=26;i++){
   if(document.getElementById('trr_yes'+i))
     document.getElementById('trr_yes'+i).style.display = "none";
 }
+//To hide all the questions except first one
 for(var j=2;j<=26;j++)
 {
   if(document.getElementById('trr'+j))
@@ -16,6 +19,7 @@ for(var j=2;j<=26;j++)
 }   
 }
 
+//To display the stop message when yes button is clicked for particular question.
 function functionAlert_yes(y){
  document.getElementById('valider_no'+y).style.backgroundColor = '#928CB2';
  for(var i =1;i<=26;i++){
@@ -37,7 +41,7 @@ function functionAlert_yes(y){
   document.getElementById('trr_yes'+y).style.display = "block";
 }
 
-
+//To display the stop message when no button is clicked for particular question.
 function functionAlert_no(z){
   document.getElementById('valider_yes'+z).style.backgroundColor = '#928CB2';
   for(var i =1;i<=26;i++){
@@ -59,7 +63,7 @@ function functionAlert_no(z){
   document.getElementById('trr_no'+z).style.display = "block";
 }
 
-
+//To display the next question when yes button is clicked for particular question and there was stop message for no button
 function next_yes(x,p){
   document.getElementById('valider_no'+p).style.backgroundColor = '#928CB2'
   document.getElementById('valider_yes'+p).style.backgroundColor = '#FF6B71';
@@ -82,7 +86,7 @@ function next_yes(x,p){
   document.getElementById('trr'+x).style.width = "100%";
 }
 
-
+//To display the next question when no button is clicked for particular question and there was stop message for yes button
 function next_no(w,q){
   document.getElementById('valider_yes'+q).style.backgroundColor = '#928CB2'
   document.getElementById('valider_no'+q).style.backgroundColor = '#FF6B71';
@@ -105,6 +109,7 @@ function next_no(w,q){
   document.getElementById('trr'+w).style.width = "100%";
 }
 
+//To display the next question when yes button is clicked for particular question and there was a next question for no button
 function next_yes1(x,p,z){
   document.getElementById('valider_no'+p).style.backgroundColor = '#928CB2'
   document.getElementById('valider_yes'+p).style.backgroundColor = '#FF6B71';
@@ -135,7 +140,7 @@ function next_yes1(x,p,z){
   document.getElementById('trr'+x).style.width = "100%";
 }
 
-
+//To display the next question when no button is clicked for particular question and there was a next question for Yes button
 function next_no1(w,q,z){
   document.getElementById('valider_yes'+q).style.backgroundColor = '#928CB2'
   document.getElementById('valider_no'+q).style.backgroundColor = '#FF6B71';
@@ -171,15 +176,12 @@ var span = [];
 for(var i=0;i<=26;i++){
 modal[i] = document.getElementById("myModal"+i);
 span[i] = document.getElementById("closed"+i);
-// Get the button that opens the modal
 }
-// Get the <span> element that closes the modal
 
-
+//To display the pop up message with description for each question
 function popup(x){
 // When the user clicks the button, open the modal 
   modal[x].style.display = "block";
-  
 
 // When the user clicks on <span> (x), close the modal
 span[x].onclick = function() {

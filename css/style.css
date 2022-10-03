@@ -36,6 +36,7 @@ display: inline-block;
 position: center;
 transition: 0.5s;
 }
+
 button span:after {
 content: '\00bb';
 position: absolute;
@@ -44,16 +45,19 @@ top: 0;
 right: -20px;
 transition: 0.5s;
 }
+
 button:hover {
 background-color: #FF6B71;
 }
 button:hover span {
 padding-right: 25px;
 }
+
 button:hover span:after {
 opacity: 1;
 right: 0;
 }
+
 header {
 border: 5px groove #34568B;
 text-align: center;
@@ -62,6 +66,7 @@ font-size:24px;
 background-repeat: no-repeat;
 background-position: fixed;
 }
+
 .header2 {
 border: 5px groove #34568B;
 text-align: center;
@@ -74,22 +79,26 @@ background-position: center;
 background-repeat: no-repeat;
 background-blend-mode: lighten;
 }
+
 footer {
 bottom: 5%; 
 
 }
+
 .footerContainer {
     width:100%;
     position:sticky; 
     bottom:0;
     
 }
+
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 
 }
+
 .box{
   display: none;
   position:center;
@@ -101,21 +110,27 @@ bottom: 5%;
   border: 5px groove #34568B; 
    margin: 20px;
 }
+
 .special-word { 
   color: red; 
 }
+
 .special-word2 { 
   color: #000000; 
 }
+
 .special-word3 { 
   color: rgb(23, 75, 245); 
 }
+
 .b1{
   position:center;
 }
+
 .b2{
   position:center;
 }
+
 .reset{
   display: inline-block;
   border-radius: 6px;
@@ -130,6 +145,7 @@ bottom: 5%;
   cursor: pointer;
   margin: 10px;
 }
+
 .reset span:after {
   content: '\00bb';
   position: absolute;
@@ -138,9 +154,11 @@ bottom: 5%;
   right: -20px;
   transition: 0.5s;
 }
+
 .reset:hover {
   background-color: #ffcc00;
 }
+
 body{
   min-height: 100vh;
   display: flex;
